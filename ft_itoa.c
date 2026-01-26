@@ -12,40 +12,44 @@
 
 #include <stdlib.h>
 
-char	*ft_putstr(int n, char *str)
-{
-	int		i;
+#include <stdlib.h>
 
-	i = 0;
-	if (n == -2147483648)
-	{
-		n = (long) n;
-	}
-	if (n < 0)
-		n = -n;
+static char	*putnbr_rec(long n, char *str)
+{
 	if (n > 9)
-	{
-		ft_putstr(n / 10, str);
-		*str++ = (n % 10) + '0';
-	}
-	else
-		*str++ = (n % 10) + '0';
+		str = putnbr_rec(n / 10, str);
+	*str++ = (n % 10) + '0';
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		i;
+	char	*start;
+	long	nb;
+	int		len;
 
-	i = 0;
-	while (n > 9 || n < -9)
+	nb = n;
+	len = 0;
+	if (nb <= 0)
+		len = 1;
+	while (n)
 	{
 		n = n / 10;
-		i++;
+		len++;
 	}
-	str = (char *)malloc(i + 1);
-	return (ft_putstr(n, str));
+	str = (char *)malloc(len + 1);
+	if (!str)
+		return (NULL);
+	start = str;
+	if (nb < 0)
+	{
+		*str++ = '-';
+		nb = -nb;
+	}
+	str = putnbr_rec(nb, str);
+	*str = '\0';
+	return (start);
 }
 
 #include <unistd.h>
