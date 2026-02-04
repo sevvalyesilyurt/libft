@@ -6,12 +6,12 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 16:34:51 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/13 17:49:11 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/04 18:25:54 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_a.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

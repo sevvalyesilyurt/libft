@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 17:56:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 15:20:20 by sevyesil         ###   ########.fr       */
+/*   Created: 2026/02/03 11:19:38 by sevyesil          #+#    #+#             */
+/*   Updated: 2026/02/03 11:38:08 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned char	*p;
-	size_t			i;
+	t_list	*temp;
 
-	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		*p++ = 0;
-		i++;
+		temp = *lst;
+		*lst = (*lst)->next;
+		del((void *)temp->content);
+		free(temp);
 	}
 }
-
-#include <stdio.h>
-int main()
-{
-	char arr[] = "aaaaaaa";
-	int	i = 0;
-
-	bzero(&arr[4],4);
-	while (arr[i] != '\0')
-	{
-		printf("%c", arr[i]);
-		i++;
-	}
-	
-}
-

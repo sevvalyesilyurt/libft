@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:00:08 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/05 16:03:57 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/03 17:53:07 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		return (len);
 	}
-	while (i < size -1 && src[i] != '\0')
+	while (i < size - 1 && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
@@ -33,3 +33,18 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest [i] = '\0';
 	return (len);
 }
+
+#include <stdio.h>
+int main()
+{
+	char arr[] = "aaaaaaaaaaaaaaaaaaa";
+	char arr2[] = "bbbbbbbbb";
+	int i = 0;
+	ft_strlcpy(arr, arr2,3);
+
+	
+		printf("%d", ft_strlcpy(arr, arr2,3));
+	
+	
+}
+

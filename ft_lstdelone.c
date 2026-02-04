@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 21:30:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/27 21:32:43 by sevyesil         ###   ########.fr       */
+/*   Created: 2026/02/03 11:16:32 by sevyesil          #+#    #+#             */
+/*   Updated: 2026/02/03 11:18:20 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst)
+	if (!lst || !del)
 		return ;
-	
+
+	del ((void *)lst->content);
+	free(lst);
 }

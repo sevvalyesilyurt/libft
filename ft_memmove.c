@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:54:27 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/09 18:13:51 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/03 17:35:55 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,21 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*lastd++ = *lasts++;
 	}
 	return (dest);
+}
+
+#include <stdio.h>
+int main()
+{
+	char arr[] = "aaaaaaaaaaaaaaaaaaa";
+	char arr2[] = "12345678";
+	int i = 0;
+	ft_memmove(arr2, arr2+5,3);
+
+	while (arr2[i] != '\0')
+	{
+		printf("%c", arr2[i]);
+		i++;
+	}
+	
 }
 

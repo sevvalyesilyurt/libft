@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:17:15 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/27 18:37:43 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/03 11:47:09 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ t_list	*ft_lstnew(void *content)
 	new_node->content = content;
 	new_node->next = NULL;
 	return (new_node);
-}
-
-int main()
-{
-	
 }

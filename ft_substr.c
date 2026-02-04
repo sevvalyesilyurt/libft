@@ -6,35 +6,33 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 12:05:30 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/15 18:28:42 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/04 18:01:02 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new_str;
-	char	*str;
-	size_t	i;
+	size_t			i;
+	size_t			s_len;
+	unsigned char	*str;
+	char			*new_str;
 
-	i = 0;
-	if (!s)
+	str = (unsigned char *) s;
+	if (!str)
 		return (NULL);
-	str = (char *) s;
-	if ((int) start >= ft_strlen((char *)s))
-	{
-		new_str = ft_memset(s, 32, 1);
-		return (new_str);
-	}
-	if (len > ft_strlen((char *)s) - start)
-		len = ft_strlen((char *)s) - start;
+	s_len = ft_strlen((char *)str);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (len > s_len - start)
+		len = s_len - start;
 	new_str = (char *)malloc(len + 1);
 	if (!new_str)
 		return (NULL);
-	while (len-- && s[start + i] != '\0')
+	i = 0;
+	while (i < len)
 	{
 		new_str[i] = str[start + i];
 		i++;

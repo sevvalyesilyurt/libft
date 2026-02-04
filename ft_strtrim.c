@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:27:51 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/15 18:21:21 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/04 19:03:58 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,29 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
-	int		len;
+	int		j;
+	int		s1_len;
 	char	*str;
-	char	*dest;
 
-	len = ft_strlen((char *)s1);
-	while (!set)
+	i = 0;
+	s1_len = ft_strlen((char *)s1);
+	j = s1_len;
+	while (*s1++)
 	{
-		if (s1[0] == *set++)
-			len--;
-		else if (s1[len - 1] == *set++)
-			len--;
+		while (*set++)
+		{
+			if (*s1 == *set)
+				i++;
+		}
 	}
-	str = (char *) malloc(len + 1);
-	while
+	while (*s1--)
+	{
+		while (*set++)
+		{
+			if (*s1 == *set)
+				j--;
+		}
+	}
+	str = ft_substr(s1, i, s1_len - i);
+	return (str);
 }

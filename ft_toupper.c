@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:17:29 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/09 18:19:20 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/03 17:57:02 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c <= 122 && c >= 97)
 	{
@@ -18,4 +18,11 @@ int	toupper(int c)
 		return (c);
 	}
 	return (c);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	printf("%d", ft_toupper(98));
 }

@@ -1,43 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 17:56:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 15:20:20 by sevyesil         ###   ########.fr       */
+/*   Created: 2026/02/03 11:38:47 by sevyesil          #+#    #+#             */
+/*   Updated: 2026/02/03 11:42:43 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned char	*p;
-	size_t			i;
-
-	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		*p++ = 0;
-		i++;
+		f((void *)lst->content);
+		lst = lst->next;
 	}
 }
-
-#include <stdio.h>
-int main()
-{
-	char arr[] = "aaaaaaa";
-	int	i = 0;
-
-	bzero(&arr[4],4);
-	while (arr[i] != '\0')
-	{
-		printf("%c", arr[i]);
-		i++;
-	}
-	
-}
-

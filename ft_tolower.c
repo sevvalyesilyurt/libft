@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 17:56:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 15:20:20 by sevyesil         ###   ########.fr       */
+/*   Created: 2026/02/03 17:58:20 by sevyesil          #+#    #+#             */
+/*   Updated: 2026/02/03 18:00:30 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	bzero(void *s, size_t n)
+int	ft_tolower(int c)
 {
-	unsigned char	*p;
-	size_t			i;
-
-	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+		if (c <= 90 && c >= 65)
 	{
-		*p++ = 0;
-		i++;
+		c = c + 32;
+		return (c);
 	}
+	return (c);
 }
 
 #include <stdio.h>
+
 int main()
 {
-	char arr[] = "aaaaaaa";
-	int	i = 0;
-
-	bzero(&arr[4],4);
-	while (arr[i] != '\0')
-	{
-		printf("%c", arr[i]);
-		i++;
-	}
-	
+	printf("%d", ft_tolower(80));
 }
-
