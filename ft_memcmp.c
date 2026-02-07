@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 15:37:48 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 19:36:58 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:36:57 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,4 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-int main()
-{
-	char 	*s1 = "sevval";
-	char 	*s2 = "sevval";
-	
-	printf("%d",ft_memcmp(s1,s2,6));
 }

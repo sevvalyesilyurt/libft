@@ -6,13 +6,13 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:56:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 15:20:20 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 02:56:23 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
 	size_t			i;
@@ -25,19 +25,3 @@ void	bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-#include <stdio.h>
-int main()
-{
-	char arr[] = "aaaaaaa";
-	int	i = 0;
-
-	bzero(&arr[4],4);
-	while (arr[i] != '\0')
-	{
-		printf("%c", arr[i]);
-		i++;
-	}
-	
-}
-

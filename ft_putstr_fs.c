@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:33:54 by marvin            #+#    #+#             */
-/*   Updated: 2026/01/25 16:33:54 by marvin           ###   ########.fr       */
+/*   Updated: 2026/02/07 01:40:47 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
-    
-    i = 0;
-    if (!s)
-        return;
-    while (s[i])
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }

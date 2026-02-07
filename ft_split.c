@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 15:03:40 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/01/22 18:10:44 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:40:55 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,4 @@ char	**ft_split(char const *s, char c)
 	if (!split_str)
 		return (NULL);
 	return (str_add(str, split_str, c));
-}
-
-#include <stdio.h>
-int main()
-{
-	printf("%c" ft_split("sevval yesilyurt", " "));
 }

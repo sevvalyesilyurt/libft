@@ -6,38 +6,29 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:27:51 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/04 19:03:58 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:03:35 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		s1_len;
-	char	*str;
+	int		start;
+	int		last;
+	int		new_len;
+	char	*new_str;
 
-	i = 0;
-	s1_len = ft_strlen((char *)s1);
-	j = s1_len;
-	while (*s1++)
-	{
-		while (*set++)
-		{
-			if (*s1 == *set)
-				i++;
-		}
-	}
-	while (*s1--)
-	{
-		while (*set++)
-		{
-			if (*s1 == *set)
-				j--;
-		}
-	}
-	str = ft_substr(s1, i, s1_len - i);
-	return (str);
+	start = 0;
+	if (!s1 || !set)
+		return (NULL);
+	last = ft_strlen((char *)s1) - 1;
+	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
+		start++;
+	while (s1[last] && ft_strchr(set, s1[last]))
+		last--;
+	new_len = last - start + 1;
+	new_str = ft_substr(s1, (unsigned int)start, (size_t)new_len);
+	return (new_str);
 }

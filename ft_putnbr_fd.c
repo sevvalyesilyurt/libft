@@ -3,29 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:44:48 by marvin            #+#    #+#             */
-/*   Updated: 2026/01/25 16:44:48 by marvin           ###   ########.fr       */
+/*   Updated: 2026/02/07 02:04:41 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <libft.h>
+#include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    char *str;
-    int     i;
+	char	*str;
+	int		i;
 
-    i = 0;
-    str = ft_itoa(n);
-    if (!str)
-        return;
-    while (str[i])
-    {
-        write(fd, &str[i], 1);
-        i++;
-    }
-    free(str);
+	i = 0;
+	str = ft_itoa(n);
+	if (!str)
+		return ;
+	while (str[i])
+	{
+		write(fd, &str[i], 1);
+		i++;
+	}
+	free(str);
 }

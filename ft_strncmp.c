@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:04:53 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 19:27:01 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:43:24 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char *s1 = "sevval";
-	char *s2 = "sevval";
-
-	printf("%d",ft_strncmp(s1,s2,5));
 }

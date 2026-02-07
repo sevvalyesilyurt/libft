@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 15:17:44 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 19:46:55 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:36:53 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-#include <stdio.h>
-int main()
-{
-	int 	s1 = 12345;
-	char	*temp;
-
-	temp = (char *)ft_memchr(&s1, 56, 2);
-	printf("%p",temp);
 }

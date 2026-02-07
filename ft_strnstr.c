@@ -6,14 +6,13 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:31:10 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/04 16:14:25 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 02:06:33 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnstr(char *big_s1, char *little_s2, size_t len)
+char	*ft_strnstr(const char *big_s1, const char *little_s2, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -23,7 +22,7 @@ char	*ft_strnstr(char *big_s1, char *little_s2, size_t len)
 	i = 0;
 	little_len = ft_strlen(little_s2);
 	if (little_s2[0] == '\0')
-		return (little_s2);
+		return ((char *)little_s2);
 	if (len < little_len)
 		return (0);
 
@@ -36,7 +35,7 @@ char	*ft_strnstr(char *big_s1, char *little_s2, size_t len)
 			j++;
 		}
 		if (little_s2[j] == '\0')
-			return (&big_s1[i]);
+			return ((char *)&big_s1[i]);
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 17:58:20 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 18:00:30 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 01:43:32 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,4 @@ int	ft_tolower(int c)
 		return (c);
 	}
 	return (c);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%d", ft_tolower(80));
 }

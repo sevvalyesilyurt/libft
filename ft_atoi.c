@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:21:33 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/04 15:58:54 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/07 04:31:36 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -23,7 +23,7 @@ int	ft_atoi(char *str)
 	{
 		i++;
 	}
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 		{
