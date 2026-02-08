@@ -6,11 +6,9 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:09:22 by marvin            #+#    #+#             */
-/*   Updated: 2026/02/07 01:41:59 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/08 16:07:49 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

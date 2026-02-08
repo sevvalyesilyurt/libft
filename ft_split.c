@@ -6,12 +6,10 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 15:03:40 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:40:55 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/08 16:07:18 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "libft.h"
 #include <stdlib.h>
 
 static int	word_len(unsigned char *str, int i, char c)

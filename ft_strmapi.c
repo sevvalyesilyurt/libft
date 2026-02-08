@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 20:16:29 by marvin            #+#    #+#             */
-/*   Updated: 2026/02/07 01:43:17 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/08 16:08:13 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-    return (str);
+	return (str);
 }

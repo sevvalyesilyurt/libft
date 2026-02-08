@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:31:10 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 02:06:33 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/08 16:08:51 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strnstr(const char *big_s1, const char *little_s2, size_t len)
 		return ((char *)little_s2);
 	if (len < little_len)
 		return (0);
-
 	while (big_s1[i] != '\0' && i < len)
 	{
 		j = 0;

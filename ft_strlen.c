@@ -6,13 +6,15 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:31:41 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/04 17:38:32 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/08 16:37:54 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stdlib.h>
+
+size_t	ft_strlen(char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
