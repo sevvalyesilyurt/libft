@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:56:04 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 02:56:23 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/10 20:40:14 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	p = (unsigned char *)s;
 	while (i < n)
 	{
-		*p++ = 0;
+		p[i] = 0;
 		i++;
 	}
 }
