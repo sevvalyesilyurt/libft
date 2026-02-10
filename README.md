@@ -15,7 +15,7 @@ işlemleri ve temel veri yapıları üzerine yoğunlaşılmıştır.
 modüler fonksiyon yazımı konularında yetkinlik kazanılması
 hedeflenmiştir.
 
-** Projenin Hedefleri **
+**Projenin Hedefleri**
 
 - C dilinin temel yapı taşlarını kavramak,
 - Bellek sızıntılarını önleyen güvenli kod yazma alışkanlığı edinmek,
@@ -91,7 +91,7 @@ fonksiyonların yeniden yazılmış halleri yer almaktadır.
 Bu fonksiyonların amacı, C dilinde bellek ve karakter
 işlemlerinin nasıl çalıştığını daha iyi kavramaktır.
 
-# 1.1 Karakter Kontrol Fonksiyonları
+#### 1.1 Karakter Kontrol Fonksiyonları
 
 - `ft_isalpha`: Verilen karakterin alfabetik bir karakter (A–Z, a–z) olup
   olmadığını kontrol eder.
@@ -105,22 +105,22 @@ işlemlerinin nasıl çalıştığını daha iyi kavramaktır.
 
 ---
 
-# 1.2 Karakter Dönüştürme Fonksiyonları
+#### 1.2 Karakter Dönüştürme Fonksiyonları
 
 - `ft_toupper`: Küçük harf bir karakteri büyük harfe dönüştürür.
 - `ft_tolower`: Büyük harf bir karakteri küçük harfe dönüştürür.
 
 ---
-# 1.3 String Fonksiyonları
+#### 1.3 String Fonksiyonları (Libc / POSIX)
 
 - `ft_strlen` : Null-terminated bir string’in uzunluğunu hesaplar.
-- `ft_strdup` :Verilen string’in dinamik bellekte bir kopyasını oluşturur.
+- `ft_strdup` : Verilen string’in dinamik bellekte bir kopyasını oluşturur.
 - `ft_strncmp`: İki string’i belirtilen karakter sayısı kadar karşılaştırır.
 - `ft_strnstr`: Bir string içinde başka bir string’i, belirtilen uzunluk
   sınırı dahilinde arar.
 ---
 
-# 1.4 Bellek Fonksiyonları
+#### 1.4 Bellek Fonksiyonları
 
 - `ft_memset` : Belirtilen bellek alanını verilen değer ile doldurur.
 - `ft_bzero`  : Bellek alanını sıfırlar.
@@ -129,17 +129,17 @@ işlemlerinin nasıl çalıştığını daha iyi kavramaktır.
 - `ft_memchr` : Bellek alanı içinde belirtilen karakteri arar.
 - `ft_memcmp` : İki bellek alanını byte byte karşılaştırır.
 ---
-# 1.5 Sayısal Dönüştürme Fonksiyonları
+#### 1.5 Sayısal Dönüştürme Fonksiyonları
 
 - `ft_atoi`: String olarak verilen sayısal değeri `int` türüne dönüştürür.
 - `ft_itoa`: Sayısal bir değeri string formatına dönüştürür.
 ---
 
-### 2. String Fonksiyonları
+### 2. Libft’e Özgü String Fonksiyonları
 
 Bu fonksiyonlar, string (char dizileri) üzerinde işlem yapmak
 amacıyla geliştirilmiştir. String parçalama, birleştirme ve
-düzenleme gibi işlemler bu grupta yer alır.
+düzenleme gibi işlemler bu grupta yer alır. Bu bölümde, C standart kütüphanesinde bulunmayan ve libft projesi kapsamında geliştirilen string fonksiyonları yer almaktadır.
 
 - `ft_substr` : Verilen bir string’in, belirtilen başlangıç indeksinden
   itibaren belirli uzunluktaki alt string’ini oluşturur.
@@ -197,10 +197,10 @@ yardımcı fonksiyonlardan oluşmaktadır.
 
 ## Kaynaklar
 
-42 Libft subject dokümanı  
-C Standard Library (man pages)  
-cppreference.com  
-GNU C Library Documentation  
+- 42 Libft subject dokümanı  
+- C Standard Library (man pages)  
+- IBM C Library Documentation
+- Stack Overflow
 
 ---
 
@@ -209,13 +209,10 @@ GNU C Library Documentation
 Bu proje geliştirilirken yapay zekâ araçları, kavramsal
 anlamayı desteklemek ve konu tekrarları yapmak amacıyla
 kullanılmıştır. Fonksiyonların implementasyonu, hata
-ayıklama süreci ve kod yazımı tamamen geliştirici tarafından
+ayıklama süreci ve kod yazımı tamamen sevyesil tarafından
 gerçekleştirilmiştir. Proje, 42 akademik dürüstlük
 kurallarına uygun olarak hazırlanmıştır.
 
 ---
 
-## Yazar
 
-Sevval Yesilyurt  
-42 Öğrencisi
