@@ -33,19 +33,27 @@ tasarlanmıştır.
 
 - Projeyi derlemek için:
 
+```bash
 make
+```
 
 - Oluşturulan obje dosyalarını silmek için:
 
+```bash
 make clean
+```
 
 - Arşiv ve obje dosyalarını silmek için:
 
-make fclean 
+```bash
+make fclean
+```
 
 - Kütüphaneyi temizleyip yeniden derlemek için:
 
+```bash
 make re
+```
 
 Derleme sonucunda `libft.a` adlı statik kütüphane oluşturulur.
 
