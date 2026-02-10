@@ -200,6 +200,7 @@ yardımcı fonksiyonlardan oluşmaktadır.
 - 42 Libft subject dokümanı  
 - C Standard Library (man pages)  
 - IBM C Library Documentation
+- GeeksforGeeks
 - Stack Overflow
 
 ---
