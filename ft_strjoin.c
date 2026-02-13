@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:04:39 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/04 18:25:17 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:02:34 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,25 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		i;
+	int		j;
 
+	j = 0;
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	str = (char *) malloc(1 + ft_strlen((char *)s1) + ft_strlen((char *)s2));
 	if (!str)
 		return (NULL);
-	while (*s1)
+	while (s1[i])
 	{
-		str[i] = *s1++;
+		str[i] = s1[i];
 		i++;
 	}
-	while (*s2)
+	while (s2[j])
 	{
-		str[i] = *s2++;
-		i++;
+		str[i + j] = s2[j];
+		j++;
 	}
-	str[i] = '\0';
+	str[i + j] = '\0';
 	return (str);
 }

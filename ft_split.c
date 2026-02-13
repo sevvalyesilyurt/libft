@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 15:03:40 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/08 16:07:18 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:27:30 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,26 @@ char	**ft_split(char const *s, char c)
 	if (!split_str)
 		return (NULL);
 	return (str_add(str, split_str, c));
+}
+
+#include <stdio.h>
+
+#include <string.h>
+int main(int argc, char const *argv[])
+{
+	char *str = strdup("hxello.sevval");
+	char c = '.';
+
+	int j;
+	j = 0;
+	char **str_free = ft_split(str, c);
+	
+	while (str_free[j])
+	{
+		printf("%s \n", str_free[j]);
+		j++;
+	}
+	
+	free(str_free);
+	return 0;
 }
