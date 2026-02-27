@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:29:51 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:09:21 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:48:42 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if ((c <= '9' && c >= '0') || (c <= 'Z' && c >= 'A')
 		|| (c <= 'z' && c >= 'a'))

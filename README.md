@@ -1,4 +1,4 @@
-*Bu proje sevyesil tarafından 42 müfredatının bir parçası olarak oluşturulmuştur.*
+*This project has been created as part of the 42 curriculum by sevyesil.*
 
 # Libft
 

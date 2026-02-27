@@ -6,25 +6,27 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:44:48 by marvin            #+#    #+#             */
-/*   Updated: 2026/02/07 02:04:41 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/16 19:03:19 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
+	long	num;
+	char	trans;
 
-	i = 0;
-	str = ft_itoa(n);
-	if (!str)
-		return ;
-	while (str[i])
+	num = (long)n;
+	if (num < 0)
 	{
-		write(fd, &str[i], 1);
-		i++;
+		write(fd, "-", 1);
+		num = -num;
 	}
-	free(str);
+	if (num > 9)
+	{
+		ft_putnbr_fd((int)(num / 10), fd);
+	}
+	trans = (num % 10) + '0';
+	write(fd, &trans, 1);
 }

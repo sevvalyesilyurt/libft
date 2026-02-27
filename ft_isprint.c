@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:38:44 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:09:40 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:48:37 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c <= 126 && c >= 32)
 	{

@@ -6,18 +6,16 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:09:43 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/10 21:02:12 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/14 15:19:40 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
+# include <stddef.h>
 
-typedef struct s_list
-{
+typedef struct s_list {
 	void			*content;
 	struct s_list	*next;
 }					t_list;

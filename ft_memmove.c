@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:54:27 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 03:01:41 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/14 19:33:45 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -19,8 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*lasts;
 	char		*lastd;
 
-	if (!src || !dest)
-		return (NULL);
 	d = (char *)dest;
 	s = (char *)src;
 	if (d < s)
@@ -35,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		lasts = s + (n - 1);
 		lastd = d + (n - 1);
-		while (n--)
+		while (n-- != 0)
 			*lastd-- = *lasts--;
 	}
 	return (dest);

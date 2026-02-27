@@ -6,11 +6,12 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 11:19:38 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 11:38:08 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/14 14:38:08 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

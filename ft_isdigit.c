@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:27:49 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:09:35 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:48:31 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 	{

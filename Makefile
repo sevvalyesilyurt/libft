@@ -6,7 +6,7 @@
 #    By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/07 00:00:00 by sevyesil          #+#    #+#              #
-#    Updated: 2026/02/07 01:08:27 by sevyesil         ###   ########.fr        #
+#    Updated: 2026/02/16 19:43:06 by sevyesil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRCS = ft_atoi.c \
        ft_putchar_fd.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c \
-       ft_putstr_fs.c \
+       ft_putstr_fd.c \
        ft_split.c \
        ft_strchr.c \
        ft_strdup.c \
@@ -62,25 +62,21 @@ SRCS = ft_atoi.c \
 	   ft_lstsize.c
 
 OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) 
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

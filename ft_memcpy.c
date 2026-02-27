@@ -6,19 +6,19 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:00:40 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:37:13 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/16 19:09:20 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *s, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*str;
 	unsigned char	*dst;
 
-	str = (unsigned char *) s;
+	str = (unsigned char *) src;
 	dst = (unsigned char *)dest;
 	i = 0;
 	while (n)

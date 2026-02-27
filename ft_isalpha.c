@@ -6,13 +6,13 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:22:22 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:09:27 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:48:07 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
-	if ((c <= 90 && c >= 65) || (c <= 122 && c >= 97))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	return (0);
 }

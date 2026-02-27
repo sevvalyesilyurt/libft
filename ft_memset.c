@@ -6,11 +6,11 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:57 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/10 21:26:46 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/14 15:04:43 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

@@ -6,11 +6,9 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:47:42 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/07 01:36:29 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/14 15:32:30 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 #include <stdlib.h>
 

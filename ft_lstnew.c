@@ -6,11 +6,12 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:17:15 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/03 11:47:09 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/02/16 21:19:49 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
